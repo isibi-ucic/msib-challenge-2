@@ -87,4 +87,4 @@ function result($data, $ke)
 result($data_1, 1);
 
 // uji data 2
-result($data_2, 1);
+result($data_2, 2);

@@ -17,17 +17,36 @@ $data = [
 
 function cek_hasil($data)
 {
-    $rata_lumba = array_sum($data['lumba_lumba']) / 3;
-    $rata_koala = array_sum($data['koala']) / 3;
+    $i = 0;
+    foreach ($data as $key => $val) {
+        $rata_lumba = array_sum($val['lumba_lumba']) / 3;
+        $rata_koala = array_sum($val['koala']) / 3;
 
-    // skor minimum = 100
-    if ($rata_koala >= 100 or $rata_koala >= 100) {
-        if ($rata_lumba > $rata_koala) {
-            echo "Pemenang Trofi adalah Tim Lumba-Lumba dengan nilai rata-rata: " . $rata_lumba;
-        } else if ($rata_lumba < $rata_koala) {
-            echo "Pemenang Trofi adalah Tim koala dengan nilai rata-rata: " . $rata_koala;
-        } else if ($rata_lumba == $rata_koala) {
-            echo "Hasil Seri dengan nilai rata-rata Lumba-lumba: " . $rata_lumba . " dan rata-rata Koala: " . $rata_koala;
+        echo "<br>";
+        echo "======================";
+        echo "<br>";
+        echo "Data " . $i += 1;
+        echo "<br>";
+
+        // skor minimum = 100
+        if ($rata_koala >= 100 or $rata_koala >= 100) {
+            if ($rata_lumba > $rata_koala) {
+                echo "Pemenang Trofi adalah Tim Lumba-Lumba dengan nilai rata-rata: " . $rata_lumba;
+            } else if ($rata_lumba < $rata_koala) {
+                echo "Pemenang Trofi adalah Tim koala dengan nilai rata-rata: " . $rata_koala;
+            } else if ($rata_lumba == $rata_koala) {
+                echo "Hasil Seri dengan nilai rata-rata Lumba-lumba: " . $rata_lumba . " dan rata-rata Koala: " . $rata_koala;
+            }
+        } else {
+            echo "Tidak ada yang dapet trofi karena skor kurng dari 100";
+            echo "<br>";
+            echo "Nilai rata-rata Lumba-lumba: " . $rata_lumba . " dan rata-rata Koala: " . $rata_koala;
         }
+
+        echo "<br>";
+        echo "======================";
+        echo "<br>";
     }
 }
+
+cek_hasil($data);
