@@ -65,7 +65,7 @@ function result($data, $ke)
     foreach ($data as $nama => $value) {
         echo "Nama : " . $nama . "<br>";
         echo "Berat : " . $value['berat'] . "Kg <br>";
-        echo "Tinggi : " . $value['berat'] . "M <br>";
+        echo "Tinggi : " . $value['tinggi'] . "M <br>";
         echo "----------------------------------------";
         echo "<br>";
     }
